@@ -1,0 +1,9 @@
+# profiles.yml for local DuckDB connection
+duckdb_dev:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      threads: 1
+      path: "D:/Tasks/Duck Db/locally/duck_db_project/dev.duckdb"  # Path to your DuckDB file
+      schema: main  # Optional: specify schema if needed
