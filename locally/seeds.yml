@@ -1,0 +1,12 @@
+# seeds/seeds.yml
+
+version: 2
+
+seeds:
+  - name: Sales_Product_Combined
+    description: "Sales product combined data"
+    config:
+      file: 'Sales_Product_Combined.csv'  # Path to your CSV file inside the 'seeds' folder
+      delimiter: ','  # Specify the delimiter, if not auto-detected
+      quote: '"'  # Specify quote character, if needed
+      header: true  # Ensure header row is read

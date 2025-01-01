@@ -1,0 +1,20 @@
+# Use the latest available Python 3.12 image (closest to 3.13)
+FROM python:3.12-slim
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the requirements file and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the already converted DuckDB.py file into the container
+COPY DuckDB.py .
+# Copy the CSV files into the container
+COPY *.csv /app/
+# Define the default command to run the script
+CMD ["python", "DuckDB.py"]
